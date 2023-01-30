@@ -85,6 +85,17 @@ nav{
 .search-bar form label{
     font-weight: 600;
 }
+.checkbtn {
+    display: none;
+    font-size:30px;
+    color: rgba(0,0,0, 0.9);
+    float: right;
+    line-height: 80px;
+    margin-right: -170px;
+}
+#check {
+    display: none;
+}
 /*--------Exclusive---------*/
 .sub-title{
     margin: 50px 0 20px;
@@ -241,5 +252,106 @@ nav{
     transform: translateX(-50%);
     bottom: -12px;
     border-radius: 2px;
-    
+}
+nav .fa-bars{
+    display: none;
+}
+/*--------------Mobile View----------*/
+@media (max-width:768px){
+    .logo{
+        position: fixed;
+        top: 4%;
+        left: 7%;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 100px 7% 0;
+        background: #000;
+        text-align: right;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav .nav-links li{
+        margin: 20px 170px;
+        display: block;
+    }
+    .register-btn{
+        margin: 25px 170px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    nav .fa-bars{
+        display: block;
+        position: fixed;
+        top: 4%;
+        right: 7%;
+        color: #fff;
+        font-size: 25px;
+    }
+    .active::after{
+        left: -40%;
+        transform: translate(0, 50%);
+        bottom: 50%;
+        border-radius: 2px;
+    }
+    .hidmenu{
+        max-height: 300px;
+    }
+    .header h1{
+        padding-top: 150px;
+        font-size: 7vw;
+    }
+    .search-bar{
+        width: 90%;
+        margin: 30px auto;
+        padding: 30px 10px 30px;
+        border-radius: 10px;
+        position: relative;
+    }
+    .search-bar form{
+        display: block;
+    }
+    .search-bar form input{
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+    .search-bar form button{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    .sub-title{
+        font-size: 6vw;
+    }
+    .cta{
+        padding: 15px 5px;
+    }
+    .cta h3{
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+    .cta p{
+        font-size: 14px;
+    }
+    .cta-btn{
+        padding: 6px 15px;
+        border-radius: 4px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .Stories p{
+        font-size: 22px;
+    }
+    .about-msg{
+        font-size: 15px;
+    }
+
 }
